@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Open+Sans:wght@600&family=Rubik:wght@400;600&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.navbarE {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #c4ccde;
+}
+
+.sidebarE {
+    width: 14rem;
+    height: calc(100vh );
+    border-right: 1px solid #c4c5de;
+    ul {
+        list-style: none;
+        padding: 1rem 2rem;
+        li {
+            margin-bottom: 1rem;
+            a {
+                text-decoration: none;
+                &.active{
+                    background-color: #3776ff;
+                }
+            }
+        }
+    }
+}
+
+.flex {
+    display: flex;
+}
+

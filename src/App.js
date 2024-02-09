@@ -17,13 +17,16 @@ import RecuperarPasswordd from './vistas/usuario/RecuperarPassword';
 import VistaBusquedaSimple from './vistas/usuario/VistaBusquedaSimple';
 import VistaBusquedaAvanzada from './vistas/usuario/VistaBusquedaAvanzada';
 import Prueba from './vistas/usuario/prueba';
-
-import { InicioAdmin } from './vistas/administrador/InicioAdmin';
+import { AuthContextProvider } from './autenticar/AuthProvider';
+import { Ayuda } from './vistas/usuario/ayuda';
 
 import InicioGerente from './vistas/gerente/InicioGerente';
 
-import { AuthContextProvider } from './autenticar/AuthProvider';
-import { Ayuda } from './vistas/usuario/ayuda';
+import { InicioAdmin } from './vistas/administrador/InicioAdmin';
+import { VentasEmpleado } from './vistas/administrador/VentasE';
+import { ClientesEmpleado } from './vistas/administrador/ClientesE';
+import { ProductosEmpleado } from './vistas/administrador/ProductosE';
+
 
 
 
@@ -45,13 +48,19 @@ export default function App() {
             <Route path="ayuda" element={<Ayuda/>}></Route>     
             <Route path="reservarA" element={<ReservarA />}></Route>            
             <Route path='avisoPrivacidad' element={<AvisoPrivacida />}></Route>
-            <Route path='inicioAdmin' element={<InicioAdmin />}></Route>
-            <Route path='inicioGerente' element={<InicioGerente/>}></Route>
+            
             <Route path="recuperarPassword" element={<RecuperarPasswordd />}></Route>
             <Route path="busquedasimple" element={<VistaBusquedaSimple />}></Route>
             <Route path="busquedaAvanzada" element={<VistaBusquedaAvanzada />}></Route>
             <Route path="prueba" element={<Prueba />}></Route>
             
+            <Route path='inicioAdmin' element={<InicioAdmin />}></Route>
+            <Route path='ventasEmpleado' element={<VentasEmpleado />}></Route>
+            <Route path='clientesEmpleado' element={<ClientesEmpleado />}></Route>
+            <Route path='productosEmpleado' element={<ProductosEmpleado />}></Route>
+
+            <Route path='inicioGerente' element={<InicioGerente/>}></Route>
+
             <Route path="*" element={<Error404 />} />
           </Routes>
         </BrowserRouter>

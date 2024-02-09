@@ -63,6 +63,7 @@ function NavbarUsuario() {
                                 <Dropdown.Item as={Link} to="/busquedaAvanzada">Busqueda Avanzada</Dropdown.Item>
                                 <Dropdown.Item as={Link} to="/contacto">Contacto</Dropdown.Item>
                                 <Dropdown.Item as={Link} to="/ayuda">Ayuda</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/inicioAdmin">Dashboard</Dropdown.Item>
                                 
                             </Dropdown.Menu>
                         </Dropdown>

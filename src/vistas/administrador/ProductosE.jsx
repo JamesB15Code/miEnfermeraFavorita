@@ -1,15 +1,15 @@
 import DashBoarAdmin from "../../componentesE/DashBoarAdmin";
 import Sidebar from "../../componentesE/sidebarE";
-import Home from "../../componentesE/Home";
+import ProductosE from "../../componentesE/ProductosE";
 
-export const InicioAdmin = () => {
+export const ProductosEmpleado = () => {
   return (
     <div>
       <div className="flex">
         <Sidebar />
-        <div className="content w-100">
+        <div className="content w-100 overflow-auto pt-24">
           <DashBoarAdmin />
-          <Home />
+          <ProductosE />
         </div>
       </div>
     </div>
