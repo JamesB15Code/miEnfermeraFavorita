@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { UrlUsuarios } from '../url/urlSitioWeb';
 import { useNavigate } from 'react-router-dom';
 import ToastMessage from '../utilidad/Toast'; // Toast 
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function RegistroUsuario() {
     const [nombre, setNombre] = useState('');
@@ -18,6 +19,16 @@ function RegistroUsuario() {
     const [message, setMessage] = useState('');
     const [toastColor, setToastColor] = useState('');
     const [showError, setShowError] = useState(false);
+
+    const [captchaValido, cambiarCaptchaValido] = useState(null);
+    const captcha = useRef(null);
+
+    const onChange = () => {
+        if (captcha.current.getValue()) {
+            console.log('El usuario no es robot')
+            cambiarCaptchaValido(true);
+        }
+    }
 
 
     const handleShowPassword = () => {
@@ -82,7 +93,7 @@ function RegistroUsuario() {
 
         setShowError(false);
 
-        if (!nombre || !apellido || !correo || !telefono || !password) {
+        if (!nombre || !apellido || !correo || !telefono || !password || !captchaValido) {
             setShowError(true);
             return;
         }
@@ -150,6 +161,14 @@ function RegistroUsuario() {
         } catch (error) {
             console.error('Error al agregar datos:', error);
             showToastMessage('Error al agregar datos!', 'error');
+        }
+
+        if (captcha.current.getValue()) {
+            console.log('El usuario no es robot')
+            cambiarCaptchaValido(true);
+        } else {
+            console.log('Acepta el captcha');
+            cambiarCaptchaValido(false);
         }
     };
 
@@ -308,7 +327,18 @@ function RegistroUsuario() {
                                     </Form.Text>
                                 )}
                             </Form.Group>
-                            
+                            <ReCAPTCHA
+                                className='justify-content-center mt-2'
+                                ref={captcha}
+                                sitekey="6Le-PmwpAAAAAInOld5TUzpt83IsG2Wc77QNX8TP"
+                                onChange={onChange}
+                            />
+
+                            {showError && !captchaValido && (
+                                <Form.Text className="text-danger">
+                                    Acepta el captcha.
+                                </Form.Text>)}
+
                             <div className=''>
                                 <div className="text-center m-3 mb-3 d-grid mx-auto">
                                     <button className='btn' style={{ color: 'white', background: '#daa232' }} type="submit">
