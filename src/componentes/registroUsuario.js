@@ -133,7 +133,7 @@ function RegistroUsuario() {
                 return;
             }
 
-            const registroResponse = await fetch(UrlUsuarios, {
+            await fetch(UrlUsuarios, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
