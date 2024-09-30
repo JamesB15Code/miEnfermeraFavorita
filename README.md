@@ -68,3 +68,50 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Mi Enfermera Favorita - PWA
+
+## Descripción
+"Mi Enfermera Favorita" es una tienda de productos y servicios de enfermería que busca optimizar sus operaciones y mejorar la experiencia del cliente a través de la implementación de una Aplicación Web Progresiva (PWA). Esta solución permitirá a los usuarios comprar, alquilar y reservar productos de enfermería de manera más eficiente y accesible desde cualquier dispositivo.
+
+
+## Objetivos del Proyecto
+- Optimizar la eficiencia operativa de la tienda.
+- Mejorar la experiencia del cliente mediante una interfaz accesible y adaptativa.
+- Aumentar los ingresos y la fidelización de los clientes.
+- Modernizar la gestión interna del negocio.
+
+## Metodología de Trabajo
+Este proyecto sigue la metodología ágil **Scrum**. El desarrollo se divide en sprints de dos semanas con entregas incrementales de valor. Las ceremonias de Scrum incluyen:
+
+- **Sprint Planning:** Planificación de las tareas a realizar en el sprint.
+- **Daily Stand-ups:** Reuniones diarias para sincronizar al equipo y resolver bloqueos.
+- **Sprint Review:** Revisión de las funcionalidades completadas al final de cada sprint.
+- **Sprint Retrospective:** Reflexión sobre las mejoras en el proceso de desarrollo.
+
+Además, se utiliza **Jira** para la gestión de tareas y **GitHub** para la colaboración en el código y la revisión de Pull Requests.
+
+
+## Tecnologías Utilizadas - Mern Stack
+- **Frontend:** React.js
+- **Backend:** Node.js, Express
+- **Base de datos:** MongoDB (NoSQL)
+- **Control de Versiones:** Git, GitHub
+- **Gestión de Proyectos:** Jira
+- **Despliegue:** Despliegue Directo (Big Bang)
+
+- ## Instalación y Configuración
+Para clonar este repositorio y configurarlo localmente, sigue estos pasos:
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/JamesB15Code/miEnfermeraFavorita
+
+2. Entra en el directorio del proyecto:
+  cd mi-enfermera-favorita
+
+3. Instala las dependencias:
+   npm install
+
+4. Inicia el servidor de desarrollo:
+   npm run dev
