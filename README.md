@@ -100,7 +100,7 @@ Además, se utiliza **Jira** para la gestión de tareas y **GitHub** para la col
 - **Gestión de Proyectos:** Jira
 - **Despliegue:** Despliegue Directo (Big Bang)
 
-- ## Instalación y Configuración
+## Instalación y Configuración
 Para clonar este repositorio y configurarlo localmente, sigue estos pasos:
 
 1. Clona el repositorio:
