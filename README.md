@@ -108,10 +108,13 @@ Para clonar este repositorio y configurarlo localmente, sigue estos pasos:
    git clone https://github.com/JamesB15Code/miEnfermeraFavorita
 
 2. Entra en el directorio del proyecto:
-  cd mi-enfermera-favorita
+   ```bash
+   cd mi-enfermera-favorita
 
-3. Instala las dependencias:
+4. Instala las dependencias:
+   ```bash
    npm install
 
-4. Inicia el servidor de desarrollo:
+5. Inicia el servidor de desarrollo:
+   ```bash
    npm run dev
